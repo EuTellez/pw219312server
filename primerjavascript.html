@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Primer JavaScript</title>
+	<script>
+		function suma()
+		{
+			/*DOM = Document Object Model*/
+			/*document.getElementById('resultado').innerHTML=a+b; inner sirve para meter html en un span*/
+			
+			
+			// sirve para evitar que concatene los valores, de esta manera los valores que estan dentro de las variables son tomadas como enteras y son sumadas
+
+			// var ope1=document.getElementById('operando1').value;
+			// var ope2=document.getElementById('operando2').value;
+			// document.getElementById('resultado').innerHTML=parseInt(ope1)+parseInt(ope2);
+
+			// agarra una expresion matematica que este en un string y lo convierte a entero y lo ejecuta
+			var ope1=document.getElementById('operando1').value;
+			var ope2=document.getElementById('operando2').value;
+			document.getElementById('resultado').innerHTML=eval(ope1+"+"+ope2);
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="operando1">
+	<input type="text" id="operando2">
+	<span id="resultado"></span> <!-- grgrg -->
+	<button onClick="suma();"> 
+		Suma
+	</button>
+</body>
+</html>
