@@ -1,8 +1,8 @@
 body
 {
 	font-size: 16px; /*1em*/
-	margin: 0px auto; /*centrado de pantalla*/
-	max-width: 1078px; /*cliente*/
+	margin: 0px auto; /*centrado de pantalla, esto se agg al final*/
+	max-width: 1078px; /*cliente lo pidio asi*/
 	min-width: 1078px;
 }
 /*estudiar diferencias entre margin y padding*/
@@ -15,22 +15,23 @@ header input
 header nav
 {
 	/*text-align: center;*/
-	margin-left: 220px;
+	margin-left: 220px; /*es para moverlo porque al centrarlo se estorba la mancha*/
 }
 header nav ul li
 {
 	border-bottom: 1px solid lightgray;
 	color: lightgray;
-	display: inline-block;
+	display: inline-block; /*es para que se vean en linea*/
 	font-size: 1.8em;
-	margin-right: 15px;
-	/*text-decoration: underline;*/
+	margin-right: 15px; /*es para que se separen los elementos*/
+	padding-bottom: 4px;
+	/*text-decoration: underline; para una linea de subrayado*/
 }
 #bg_offer
 {
 	left: -35px;
 	top: -410px;
-	position: relative;
+	position: relative; /*le quita el static, y se hace relativo al body no a su caja*/
 
 }
 #granthams
@@ -50,7 +51,7 @@ header nav ul li
 #primerSeccion article
 {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: top;/*todos los elementos del article se alineen vertical hacia arriba*/
 }
 #secc01art01
 {
@@ -61,4 +62,29 @@ header nav ul li
 {
 	margin-left: 50px;
 	width: 30%;
+}
+#segundaSeccion
+{
+	text-align: right;
+	padding-right: 122px;
+}
+.colorrosa
+{
+	color: #FF0099;
+}
+.letragrande
+{
+	font-size: 3.5em;
+}
+.nito
+{
+	font-weight: bold;
+}
+.letramediana
+{
+	font-size: 2em;
+}
+.colorverde
+{
+
 }
