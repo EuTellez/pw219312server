@@ -1,0 +1,105 @@
+body
+{
+	border: 1px solid red;
+	font-size: 16px; /*1em*/
+	margin: 0px auto;
+	max-width: 1024px;
+	max-height: 1024px;
+}
+#seccion1 article
+{	
+	/*border: 1px solid red;*/
+	display: inline-block;
+	vertical-align: top;	
+}
+#articulo1 
+{
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 60%;
+	background: #F6F3F0;
+}
+#articulo11
+{
+	margin-right: 20px;
+	width: 30%;
+}
+#articulo12
+{
+	margin-top: 20%;
+	text-align: center;
+	width: 60%;
+}
+#articulo2
+{
+	padding-top: 12%;
+	padding-bottom: 9.5%;
+	padding-right: 4.6%;
+	padding-left: 4.6%;
+	text-align: center;
+	width: 30%;
+	background: #6E6D6C;
+}
+#persona
+{
+	width: 100%;
+	height: 100%;
+}
+#seccion2 article
+{	
+	
+	display: inline-block;
+	vertical-align: top;	
+}
+#s2articulo1
+{
+	background: #42B7F1;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 30%;
+}
+
+#s2articulo11
+{
+	width: 20%;
+}
+#s2articulo12
+{
+	width: 70%;
+}
+#twitter
+{
+	width: 100%;
+	height: 100%;
+}
+#s2articulo2
+{
+	width: 20%;
+}
+#s2articulo3
+{
+	width: 30%;
+}
+
+
+
+.cursiva
+{
+	font-weight: unset;
+}
+.blanco
+{
+	color: #FFFEFD;
+}
+.grande
+{
+	font-size: 2em;
+}
+.mediana
+{
+	font-size: 1.5em;
+}
