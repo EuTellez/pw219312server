@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>LocalStorage y SessionStorage</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<article id="demo">0</article>
+	<button onClick="aumenta();">Aumenta</button>
+	<button onClick="reinicia();">Reinicia</button>
+	<button onClick="elimina();">Elimina</button>
+	
+	<!-- aqui es donde se recomienda que el script vaya, debido a que primero se carguen los estilos y la informacion de la pagina y al final los scripts. -->
+	<script>
+		var imprimir = function(dato)
+		{
+			document.getElementById('demo').innerHTML=dato;
+		}
+		var aumenta = function()
+		{
+			localStorage.cuenta++;
+			imprimir(localStorage.cuenta);
+		}
+		var reinicia = function()
+		{
+			localStorage.cuenta = 0; //en este caso la variable existe nuevamente debido a que se asigna cero y la variable se crea nuevamente
+			imprimir(localStorage.cuenta);
+		}
+		var elimina = function()
+		{
+			localStorage.removeItem("cuenta");
+			imprimir(localStorage.cuenta);
+		}
+		//verificar que el navegador soporta storage
+		if(typeof(Storage) != "undefined")
+		{
+			//se tiene que inicializar la variable para que la variable exista en local storage
+			//localStorage.cuenta = 0
+			if(localStorage.cuenta) //existe en localStorage
+			{
+				imprimir(localStorage.cuenta);
+			}
+			else //si no, pues se crea
+			{
+				localStorage.cuenta = 0;
+			}
+		}
+	</script>
+</body>
+</html>
