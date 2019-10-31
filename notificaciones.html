@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Notificaciones</title>
+</head>
+<body>
+	<button onClick="enviarNotificaciones();">
+		Notificaciones
+	</button>
+	<script>
+		//lo que esta dentro de la pagina forma parte del document
+		//para las notificaciones se usa un objeto distinto que se llama window, porque estas aparecen fuera de la pagina
+		function enviarNotificaciones() 
+		{
+			//comprobar si el navegador soporta notificaciones
+			if(!("Notification") in window)
+			{
+				alert("No soporta notificaciones");
+			}
+			else if(Notification.permission==="granted") //es para saber si el usuario ya autorizo notificaciones
+			{
+				//comprobamos si ya autorizamos
+				//lanzamos las notificaciones
+				var notificacion=new Notification("Segunda notificacion");
+			}
+			else if(Notification.permission==="denied" || Notification.permission==="default")
+			{
+				//solicitamos permiso al usuario para enviar notificaciones
+				Notification.requestPermission(function(permission){
+					//Si el usuario concede el permiso, lanzamos la notificacion, este permission que viene como parametro es la decision del usuario
+					if(permission === "granted")
+					{
+						var notificacion=new Notification("Bienvenido : )");
+					}
+				}); //un callback es regresar una funcion de respuesta dentro de otra funcion
+			}
+		}
+	</script>
+</body>
+</html>
